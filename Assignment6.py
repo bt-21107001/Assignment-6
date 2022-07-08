@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[ ]:
-
+#Q1
 
 def perfect(num):
     num_div=[]
@@ -25,7 +25,7 @@ perfect(num)
 
 
 # In[ ]:
-
+#Q2
 
 def palindrome(string):
     rev_string=string[::-1]
@@ -39,7 +39,7 @@ palindrome(user_string)
 
 
 # In[ ]:
-
+#Q3
 
 from math import factorial
 
@@ -53,7 +53,7 @@ for i in range(n):
 
 
 # In[ ]:
-
+#Q4
 
 def palgram(str):
     alphabet="abcdefghijklmnopqrstuvwxyz"
@@ -70,18 +70,19 @@ else:
 
 
 # In[ ]:
+#Q5
 
-
-input_string=str(input("enter a hyphen separated sentence: "))
-
-li=list(input_string.split("-"))
-li.sort()
-
-print("-".join(li))
+def sort_alpha():
+    seq = input("Enter a hyphen-separated sequence of words: ")
+    a = seq.split("-")
+    b = sorted(a)
+    c = "-".join(b)
+    print(c)
+sort_alpha()
 
 
 # In[ ]:
-
+#Q6
 
 def student_data(student_name , student_branch, student_id):
     print("student name: ",student_name)
@@ -92,7 +93,7 @@ student_data("Aayush","Mechanical",21107001)
 
 
 # In[ ]:
-
+#Q7
 
 class Student:
     pass 
@@ -111,7 +112,7 @@ print()
 
 
 # In[ ]:
-
+#Q8
 
 class Zero:
     def threeSum(self, nums):
@@ -138,7 +139,7 @@ class Zero:
 print(Zero().threeSum([-25, -10, -7, -3, 2, 4, 8, 10]))                 
 
 # In[ ]:
-
+#Q9
 
 class parantheses:
     def find(str):
