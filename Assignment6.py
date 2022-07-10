@@ -4,53 +4,54 @@
 # In[ ]:
 #Q1
 
-def perfect(num):
-    num_div=[]
-    sum=0
-
-    for i in range(1,num+1):
-        if num%i==0:
-            num_div.append(i)
-    print("divisors of ", num," are ", num_div)
-
-    for elem in num_div:
-        sum= sum+elem
-    if num==0.5*sum:
-        print(num, " is a perfect number.")
+def perfect_no(num):
+    #Make a loop to find the divisors of the number and add them
+    sum_of_divisor = 0
+    for divisor in range(1, num + 1):
+        if num % divisor == 0:
+            sum_of_divisor += divisor
+    
+    if (sum_of_divisor/2) == num:
+        return f"{num} is a perfect number"
     else:
-        print(num, " is not a perfect number.")
+        return f"{num} is not a perfect number"
 
-num= int(input("enter a number to check whether its perfect: "))
-perfect(num)
+user_input = int(input("Enter number you want to check\n"))
+print(perfect_no(user_input))
 
 
 # In[ ]:
 #Q2
 
-def palindrome(string):
-    rev_string=string[::-1]
-    if string==rev_string:
-        print("entered string is a palindrome")
+def palindrome(user_inp):
+    #remove the spaces in the input string
+    joined = user_inp.replace(" ", "")
+    reverse_str = joined[::-1]
+    
+    if reverse_str == joined:
+        return "Yes, the entered string is a palindrome"
     else:
-        print("entered string is not a palindrome")
+        return "No, the entered string is not a palindrome"
 
-user_string=str(input("enter a word, phrase or sentence: "))
-palindrome(user_string)
-
+user_inp = input("Enter string to check\n")
+print(palindrome(user_inp))
 
 # In[ ]:
 #Q3
 
 from math import factorial
 
-n=int(input("Enter no of rows: "))
-for i in range(n):
-    for j in range(n-1-i):
-        print(" ", end="")
-    for k in range (i+1):
-        print(factorial(i) // (factorial(i-k)*factorial(k)) , end=" ") # nCr = n! / ((n-r)! * r!)
-    print()
+from math import factorial
+def pascal_triangle(n):
+    for i in range(n):
+        for j in range(n-1-i):
+            print(" ", end="")
+        for k in range (i+1):
+            print(factorial(i) // (factorial(i-k)*factorial(k)) , end=" ") # nCr = n! / ((n-r)! * r!)
+        print()
 
+n=int(input("Enter no of rows: "))
+pascal_triangle(n)
 
 # In[ ]:
 #Q4
